@@ -1,0 +1,3 @@
+[submodule "libs/jeromq"]
+	path = libs/jeromq
+	url = git://github.com/miniway/jeromq.git
