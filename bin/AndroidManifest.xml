@@ -23,6 +23,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+        <service
+            class=".ZMQService"
+            android:name="ZMQService"
+            android:process=":zmq_service"
+            android:exported="false">
+		</service>
     </application>
-
 </manifest>

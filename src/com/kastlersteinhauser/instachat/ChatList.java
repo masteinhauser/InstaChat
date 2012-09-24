@@ -2,6 +2,7 @@ package com.kastlersteinhauser.instachat;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
 
@@ -11,12 +12,9 @@ public class ChatList extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_chat_list);
-
-		try{
-			new ZMQTest().execute();
-		} catch(Exception e){
-			Log.e(this.getClass().getSimpleName(), e.toString());
-		}
+		
+		Intent zmqService = new Intent(this, ZMQService.class);
+		startService(zmqService);
 	}
 
 	@Override

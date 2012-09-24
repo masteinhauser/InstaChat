@@ -19,7 +19,7 @@ public final class R {
     }
     public static final class layout {
         public static final int activity_chat_list=0x7f030000;
-        public static final int activity_zmq_test=0x7f030001;
+        public static final int chat_message=0x7f030001;
     }
     public static final class menu {
         public static final int activity_chat_list=0x7f060000;
