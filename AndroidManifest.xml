@@ -6,9 +6,9 @@
     <uses-sdk
         android:minSdkVersion="9"
         android:targetSdkVersion="15" />
-    
-    <uses-permission
-        android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:icon="@drawable/ic_launcher"
@@ -23,12 +23,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
+
         <service
-            class=".ZMQService"
             android:name="ZMQService"
-            android:process=":zmq_service"
-            android:exported="false">
-		</service>
+            class=".ZMQService"
+            android:exported="false"
+            android:process=":zmq_service" >
+        </service>
     </application>
+
 </manifest>
